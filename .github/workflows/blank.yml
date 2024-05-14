@@ -11,6 +11,7 @@ on:
     branches: [ "master" ]
     paths:
       - '**.js'
+      - './scripts/**'
   pull_request:
     branches: [ "master" ]
 
