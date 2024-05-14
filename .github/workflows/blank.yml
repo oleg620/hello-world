@@ -9,6 +9,8 @@ on:
   # Triggers the workflow on push or pull request events but only for the "master" branch
   push:
     branches: [ "master" ]
+    paths:
+      - '**.js'
   pull_request:
     branches: [ "master" ]
 
@@ -34,5 +36,6 @@ jobs:
           git ls-files
 
       - name: Run a script from repo
+        # doesn't work - permission error
         run: |
           ./scripts/test.sh
