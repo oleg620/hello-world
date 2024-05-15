@@ -33,10 +33,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          echo files in the repo:
-          git ls-files
+          echo status:
+          git status
 
-      # - name: Run a script from repo
-      #   # doesn't work - permission error
-      #   run: |
-      #     ./scripts/test.sh
+      - name: Run a script from repo
+        # doesn't work - permission error
+        run: |
+          ./scripts/test.sh
